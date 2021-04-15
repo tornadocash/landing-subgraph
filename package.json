@@ -4,10 +4,10 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ dan1kov/test",
-    "create-local": "graph create --node http://localhost:8020/ dan1kov/test",
-    "remove-local": "graph remove --node http://localhost:8020/ dan1kov/test",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 dan1kov/test"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ tornadocash/landing-subgraph",
+    "create-local": "graph create --node http://localhost:8020/ tornadocash/landing-subgraph",
+    "remove-local": "graph remove --node http://localhost:8020/ tornadocash/landing-subgraph",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 tornadocash/landing-subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.20.0",

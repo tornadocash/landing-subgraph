@@ -1,26 +1,87 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Contract
+    name: eth01
     network: mainnet
     source:
       address: "0x12D66f87A04A9E220743712cE6d9bB1B5616B8Fc"
-      abi: Contract
+      abi: Tornado
+      startBlock: 9116966
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.2
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Deposit
-        - Withdrawal
+        # - Withdrawal
       abis:
-        - name: Contract
-          file: ./abis/Contract.json
+        - name: Tornado
+          file: ./abis/Tornado.json
       eventHandlers:
         - event: Deposit(indexed bytes32,uint32,uint256)
           handler: handleDeposit
-        - event: Withdrawal(address,bytes32,indexed address,uint256)
-          handler: handleWithdrawal
-      file: ./src/mapping.ts
+        # - event: Withdrawal(address,bytes32,indexed address,uint256)
+        #   handler: handleWithdrawal
+      file: ./src/mappings/instances/eth/01.ts
+  - kind: ethereum/contract
+    name: eth1
+    network: mainnet
+    source:
+      address: "0x47CE0C6eD5B0Ce3d3A51fdb1C52DC66a7c3c2936"
+      abi: Tornado
+      startBlock: 9116966
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+      abis:
+        - name: Tornado
+          file: ./abis/Tornado.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+      file: ./src/mappings/instances/eth/1.ts
+  - kind: ethereum/contract
+    name: eth10
+    network: mainnet
+    source:
+      address: "0x910Cbd523D972eb0a6f4cAe4618aD62622b39DbF"
+      abi: Tornado
+      startBlock: 9116966
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+      abis:
+        - name: Tornado
+          file: ./abis/Tornado.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+      file: ./src/mappings/instances/eth/10.ts
+  - kind: ethereum/contract
+    name: eth100
+    network: mainnet
+    source:
+      address: "0xA160cdAB225685dA1d56aa342Ad8841c3b53f291"
+      abi: Tornado
+      startBlock: 9116966
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Deposit
+      abis:
+        - name: Tornado
+          file: ./abis/Tornado.json
+      eventHandlers:
+        - event: Deposit(indexed bytes32,uint32,uint256)
+          handler: handleDeposit
+      file: ./src/mappings/instances/eth/100.ts
