@@ -1,13 +1,13 @@
 {
-  "name": "test",
-  "license": "UNLICENSED",
+  "name": "tornado-cash-statistic",
+  "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ tornadocash/landing-subgraph",
-    "create-local": "graph create --node http://localhost:8020/ tornadocash/landing-subgraph",
-    "remove-local": "graph remove --node http://localhost:8020/ tornadocash/landing-subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 tornadocash/landing-subgraph"
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ tornadocash/tornado-cash-statistic",
+    "create-local": "graph create --node http://localhost:8020/ tornadocash/tornado-cash-statistic",
+    "remove-local": "graph remove --node http://localhost:8020/ tornadocash/tornado-cash-statistic",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 tornadocash/tornado-cash-statistic"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.20.0",
